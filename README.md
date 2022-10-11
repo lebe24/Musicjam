@@ -1,2 +1,3 @@
 # Musicjam
-A minimalistic music web app 
+
+<img src="musicjam.png" />
