@@ -18,7 +18,7 @@ const TopChartCard = ({ song, i, isPlaying, activeSong, handlePauseClick, handle
     <div className="flex-1 flex flex-row justify-between items-center">
       <img className="w-20 h-20 rounded-lg" src={song?.images?.coverart} alt={song?.title} />
       <div className="flex-1 flex flex-col justify-center mx-3">
-        <Link to={`/songs/${song.key}`}>
+        {/* <Link to={`/songs/${song.key}`}>
           <p className="text-xl font-bold text-white">
             {song?.title}
           </p>
@@ -27,7 +27,7 @@ const TopChartCard = ({ song, i, isPlaying, activeSong, handlePauseClick, handle
           <p className="text-base text-gray-300 mt-1">
             {song?.subtitle}
           </p>
-        </Link>
+        </Link> */}
       </div>
     </div>
     <PlayPause
@@ -50,7 +50,10 @@ const TopPlay = () => {
     divRef.current.scrollIntoView({ behavior: 'smooth' });
   });
 
+  console.log(data)
+
   const topPlays = data?.slice(0, 5);
+  
 
   const handlePauseClick = () => {
     dispatch(playPause(false));
@@ -109,9 +112,9 @@ const TopPlay = () => {
               style={{ width: '25%', height: 'auto' }}
               className="shadow-lg rounded-full animate-slideright"
             >
-              <Link to={`/artists/${artist?.artists[0].adamid}`}>
+              {/* <Link to={`/artists/${artist?.artists[0].adamid}`}>
                 <img src={artist?.images?.background} alt="Name" className="rounded-full w-full object-cover" />
-              </Link>
+              </Link> */}
             </SwiperSlide>
           ))}
         </Swiper>
