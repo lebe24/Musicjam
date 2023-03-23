@@ -1,6 +1,7 @@
 # Musicjam
-
+<p align="center">
 <img src="musicjam.png" />
+</p>
 
 ## short description
 
